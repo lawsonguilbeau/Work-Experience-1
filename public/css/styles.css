@@ -21,7 +21,12 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 1.6;
@@ -159,7 +164,13 @@ img {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange) 50%, var(--ink) 50%, var(--ink) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--orange) 0%,
+    var(--orange) 50%,
+    var(--ink) 50%,
+    var(--ink) 100%
+  );
 }
 
 .nav-links {
@@ -178,7 +189,7 @@ img {
 }
 
 .nav-links a:hover,
-.nav-links a[aria-current='page'] {
+.nav-links a[aria-current="page"] {
   color: var(--orange-dark);
 }
 
@@ -193,7 +204,13 @@ img {
 }
 
 .site-header--home .logo-mark {
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange) 50%, var(--white) 50%, var(--white) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--orange) 0%,
+    var(--orange) 50%,
+    var(--white) 50%,
+    var(--white) 100%
+  );
 }
 
 .site-header--home .container {
@@ -339,7 +356,7 @@ img {
 }
 
 .check-list li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 6px;
@@ -458,7 +475,7 @@ img {
 }
 
 .icon-dot::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 13px;
   border-radius: 50%;
@@ -746,6 +763,33 @@ img {
   padding-top: 24px;
 }
 
+@media (max-width: 1024px) {
+  .site-header--home .container {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .site-header--home .nav-links {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .site-header--home .nav-links a {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .hero-media {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
@@ -769,6 +813,10 @@ img {
     order: 0;
   }
 
+  .playbook-grid {
+    grid-template-columns: 1fr;
+  }
+
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -788,6 +836,7 @@ img {
     font-size: 34px;
   }
 
+  .playbook-grid,
   .card-grid {
     grid-template-columns: 1fr;
   }
@@ -798,5 +847,11 @@ img {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+  .hero-inner {
+    flex-direction: column;
+  }
+  .hero-media {
+    width: 100%;
   }
 }
