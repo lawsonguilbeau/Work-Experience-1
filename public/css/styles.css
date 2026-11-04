@@ -811,9 +811,20 @@ img {
   }
 }
 
+@media (max-width: 1100px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  .hero-media {
+    width: 100%;
+  }
+}
+
 @media (max-width: 850px) {
   .hero-inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 32px;
   }
 
@@ -883,7 +894,7 @@ img {
     grid-template-columns: 1fr;
   }
   .hero-inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .hero-media {
     width: 100%;
